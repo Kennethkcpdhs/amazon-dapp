@@ -22,7 +22,7 @@ As it turns out, the domain name <http://ec2-52-207 (some more numbers) .compute
 
 ### 3. Choosing the wrong region provided by the (complimentary) Amazon Account 
 Remember to check the one provided by the account
-![Vocareum/Amazon Dashboard](https://user-images.githubusercontent.com/47784720/72682480-59c3c200-3b08-11ea-8618-65cb378d1c5a.png)
+![Vocareum/Amazon Dashboard](https://user-images.githubusercontent.com/47784720/72682480-59c3c200-3b08-11ea-8618-65cb378d1c5a.png =250x)
 ![Screenshot (253)](https://user-images.githubusercontent.com/47784720/72682452-2719c980-3b08-11ea-9deb-96371cdcd5b2.png)
 
 ### 4. Resetting of Amazon Account Login Session Duration
