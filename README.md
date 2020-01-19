@@ -41,3 +41,33 @@ eb config
 ```
 
 If one opens up the config file, one can see by searching WSGI settings that the default flask application looks for application.py, and hence will throw up errors if not found.
+
+
+### 6. Not supposed to specify local host in app.run()
+In a typical flask application:
+```python
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 80))
+
+    #for normal local testing use this run
+    app.run(ssl_context="adhoc", host='127.0.0.1', port=port, debug=True)
+
+```
+However, one does not need to specify the host/ssl_context or port wierdly.
+```python
+#use this for deployment to AWS Services
+
+if __name__ == '__main__':
+    application.run(debug=True)
+```
+
+## Bonus
+
+Internal server error
+Error Logs
+![image](https://user-images.githubusercontent.com/47784720/72682726-3c442780-3b0b-11ea-9a16-43527f77e344.png)
+Even though it "seems to be working", it does not quite work. The error logs dont seem to register this error.
+![image](https://user-images.githubusercontent.com/47784720/72682740-7281a700-3b0b-11ea-9dcd-8b463f444adb.png)
+
+
