@@ -14,8 +14,10 @@ Amazon Elastic Beanstalk, using Flask(Amazon)/ Used ggl-login apis/telegram api/
 ### 1. Adding a screenshot to Github readme.md --> Click on issues --> then drag and drop the image --> copy over the corresponding link
 
 ### 2. Google Oauth does not accept non top level domains for login
-Tried Using EC2 to run a remote Linux instance to host the files and dapp led to errors
-As it turns out, the domain name <http://ec2-52-207 (some more numbers) .compute-1.amazonaws.com/>'s top level domain is owned by Amazon and hence cannot be used. Another domain such as <http://flask-env.<some stuff>.us-east-1.elasticbeanstalk.com/> is accepted
+Tried Using EC2 to run a remote Linux instance to host the files and dapp led to errors.
+
+As it turns out, the domain name <http://ec2-52-207 (some more numbers) .compute-1.amazonaws.com/>'s top level domain is owned by Amazon and hence cannot be used. Another domain such as <http://flask-env.<some stuff>.us-east-1.elasticbeanstalk.com/> is accepted.
+
 ![Screenshot (251)](https://user-images.githubusercontent.com/47784720/72682346-fbe2aa80-3b06-11ea-8ac7-81c7b134678f.png)
 
 ### 3. Choosing the wrong region provided by the (complimentary) Amazon Account 
