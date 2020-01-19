@@ -11,4 +11,4 @@
 Amazon Elastic Beanstalk, using Flask(Amazon)/ Used ggl-login apis/telegram api/open weather api
 ## Debug Log
 
-![picture1](https://drive.google.com/file/d/1WWM6DNrIH--2pnCugFxyHuYxhjECAii5/preview)
+![picture1](https://drive.google.com/file/d/1WWM6DNrIH--2pnCugFxyHuYxhjECAii5/view?usp=sharing)
