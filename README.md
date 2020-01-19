@@ -1,4 +1,12 @@
-# Dunmanapp
+# Dunmanapp - adapted from boyuan618/dunman app for purposes of NTU SCSE Competition
+
+## Problems to solve
+1. Unknown Flag raising venues
+2. Messy Announcements
+3. Complicated Leave forms
+4. Teachers' locker numbers
 
 
-THIS IS A WEB APPLICATION MADE BY COMPUTING@DHS, IN COLLABORATION WITH STUDENT COUNCIL OF 2019/2020 AND THE EXECUTIVE PRESIDENT
+## Hosted on
+Amazon Elastic Beanstalk, using Flask(Amazon)/ Used ggl-login apis/telegram api/open weather api
+## Debug Log
