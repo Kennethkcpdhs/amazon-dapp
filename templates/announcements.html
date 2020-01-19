@@ -1,0 +1,42 @@
+{% extends "testbootstrap.html" %}
+
+{% block body %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='styles/announcements.css')}}">
+<link href="https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro" rel='stylesheet'>
+<script src="static/scripts/announcements.js"></script>
+<head> 
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+
+<h1 class="header">Announcements:</h1>
+
+<form action="/announcement_details" method="get">
+
+  {% for announcement in announcements %}
+    <div style="text-align:center;">
+      <button type="submit" name="id" value="{{ announcement[0] }}" class="box">
+        
+        <h1 class="box-title">
+          {% if announcement[1]|length > 100 %}
+            {{ announcement[1][0:100] }} ...
+          {% else %}
+            {{ announcement[1] }}
+          {% endif %}
+        </h1>
+        
+        <h1 class="box-detail">{{ announcement[4] }}</h1>
+        
+        <div class="box-bottom">
+          <h1 class="box-people">{{ announcement[3] }}</h1>
+          <h1 class="box-date">{{ announcement[2] }}</h1>
+        </div>
+        
+      </button>
+    </div>
+  {% endfor %}
+
+</form>
+
+{% endblock %}

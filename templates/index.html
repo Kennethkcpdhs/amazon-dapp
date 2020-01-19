@@ -1,0 +1,55 @@
+{% extends "testbootstrap.html" %}
+
+{% block body %}
+<!-- Use any element to open the sidenav 
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+
+<div id="main">
+  <h1 style="text-align:center;">Welcome {{ user_email }} </h1>
+</div>
+
+<table id="t01a" class="center">
+  <tr>
+    <th>Level</th>
+    <th>Venue</th>
+  </tr>
+  <tr>
+    <td>Year 1</td>
+    <td>{{ levels[0][1] }}</td>
+  </tr>
+  <tr>
+    <td>Year 2</td>
+    <td>{{ levels[0][2] }}</td>
+  </tr>
+  <tr>
+    <td>Year 3</td>
+    <td>{{ levels[0][3] }}</td>
+  </tr>
+  <tr>
+    <td>Year 4</td>
+    <td>{{ levels[0][4] }}</td>
+  </tr>
+  <tr>
+    <td>Year 5</td>
+    <td>{{ levels[0][5] }}
+  </td>
+  <tr>
+    <td>Year 6</td>
+    <td>{{ levels[0][6] }}
+  </td>
+  <tr>
+    <td>Staff</td>
+    <td>{{ levels[0][7] }}
+  </td>
+</table>
+<br>
+<br>
+<br>
+<p>                                                        
+
+
+
+
+</p>
+{% endblock %}

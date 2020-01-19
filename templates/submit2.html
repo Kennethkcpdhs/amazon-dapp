@@ -1,0 +1,127 @@
+{% extends "testbootstrap.html" %}
+
+{% block body %}
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond|PT+Sans:400,400i,700,700i&subset=latin-ext" rel="stylesheet">
+<!-- Use any element to open the sidenav
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <h1 align="center">Update Submission</h1>
+</div>
+
+<div class='container'>
+<form action="/submission" method="post">
+  <h4>Submitting for {{group}}: </h4>
+    <select name="group">
+        {% if group == 'competitions' %}
+        <option selected value="competitions">Competitions</option>
+        {% endif %}
+        {% if group == 'announcements' %}
+        <option selected value="announcements">Announcements</option>
+        {% endif %}
+        {% if group == 'morning' %}
+        <option selected value="morning">Morning flagraising</option>
+        {% endif %}
+    </select>
+    <hr size=0 width=0%>
+    {% if group == 'morning' %}
+    <h4>Year 1:</h4>
+    <input type="radio" name="y1" value="Parade Square"> Parade Square <br>
+    <input type="radio" name="y1" value="Classroom"> Classroom <br>
+    <input type="radio" name="y1" value="Hall"> Hall <br>
+    <input type="radio" name="y1" value="Auditorium"> Auditorium <br>
+    <input type="radio" name="y1" value="PAC"> PAC <br>
+    <br>
+    <h4>Year 2:</h4>
+    <input type="radio" name="y2" value="Parade Square"> Parade Square <br>
+    <input type="radio" name="y2" value="Classroom"> Classroom <br>
+    <input type="radio" name="y2" value="Hall"> Hall <br>
+    <input type="radio" name="y2" value="Auditorium"> Auditorium <br>
+    <input type="radio" name="y2" value="PAC"> PAC <br>
+    <br>
+    <h4>Year 3:</h4>
+    <input type="radio" name="y3" value="Parade Square"> Parade Square <br>
+    <input type="radio" name="y3" value="Classroom"> Classroom <br>
+    <input type="radio" name="y3" value="Hall"> Hall <br>
+    <input type="radio" name="y3" value="Auditorium"> Auditorium <br>
+    <input type="radio" name="y3" value="PAC"> PAC <br>
+    <br>
+    <h4>Year 4:</h4>
+    <input type="radio" name="y4" value="Parade Square"> Parade Square <br>
+    <input type="radio" name="y4" value="Classroom"> Classroom <br>
+    <input type="radio" name="y4" value="Hall"> Hall <br>
+    <input type="radio" name="y4" value="Auditorium"> Auditorium <br>
+    <input type="radio" name="y4" value="PAC"> PAC <br>
+    <br>
+    <h4>Year 5:</h4>
+    <input type="radio" name="y5" value="Parade Square"> Parade Square <br>
+    <input type="radio" name="y5" value="Classroom"> Classroom <br>
+    <input type="radio" name="y5" value="Hall"> Hall <br>
+    <input type="radio" name="y5" value="Auditorium"> Auditorium <br>
+    <input type="radio" name="y5" value="PAC"> PAC <br>
+    <br>
+    <h4>Year 6:</h4>
+    <input type="radio" name="y6" value="Parade Square"> Parade Square <br>
+    <input type="radio" name="y6" value="Classroom"> Classroom <br>
+    <input type="radio" name="y6" value="Hall"> Hall <br>
+    <input type="radio" name="y6" value="Auditorium"> Auditorium <br>
+    <input type="radio" name="y6" value="PAC"> PAC <br>
+    <br>
+    <h4>Staff:</h4>
+    <input type="radio" name="staff" value="Parade Square"> Parade Square <br>
+    <input type="radio" name="staff" value="Classroom"> Classroom <br>
+    <input type="radio" name="staff" value="Hall"> Hall <br>
+    <input type="radio" name="staff" value="Auditorium"> Auditorium <br>
+    <input type="radio" name="staff" value="PAC"> PAC <br>
+    <br>
+    
+    {% elif group == "announcements" %}
+    <h4>Title: </h4>
+    <textarea rows="1" cols='40' name="title" required></textarea>
+    <br>
+
+    <h4>Date of event:</h4>
+    <input type="date" name="eventdate" required>
+    <hr size=0 width=0%>
+
+    <h4>People involved:</h4>
+    <input type="checkbox" name="people" value="Y1"> Year 1 <br>
+    <input type="checkbox" name="people" value="Y2"> Year 2 <br>
+    <input type="checkbox" name="people" value="Y3"> Year 3 <br>
+    <input type="checkbox" name="people" value="Y4"> Year 4 <br>
+    <input type="checkbox" name="people" value="Y5"> Year 5 <br>
+    <input type="checkbox" name="people" value="Y6"> Year 6 <br>
+    <input type="checkbox" name="people" value="Staff"> Staff <br>
+
+    <hr size=0 width=0%>
+
+    <h4>Details: </h4>
+    <textarea rows="4" cols='40' name="details" required></textarea>
+    <br>
+
+    {% elif group == "competitions" %}
+    <h4>Title: </h4>
+    <textarea rows="1" cols='40' name="title" required></textarea>
+    <br>
+
+    <h4>Date of event:</h4>
+    <input type="date" name="eventdate" required>
+    <hr size=0 width=0%>
+
+    <h4>People involved:</h4>
+    <select name="people">
+        {% for i in cca %}
+        <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+    </select>
+
+    <hr size=0 width=0%>
+
+    <h4>Details: </h4>
+    <textarea rows="4" cols='40' name="details" required></textarea>
+    <br>
+    {% endif %}
+    <input type="submit" value="Submit">
+</form>
+</div>
+
+{% endblock %}
